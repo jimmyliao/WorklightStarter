@@ -1,20 +1,20 @@
 ----------------------------------------------------------------
-Sun Dec 07 22:37:15 CST 2014:
-Booting Derby version The Apache Software Foundation - Apache Derby - 10.8.2.3 - (1326460): instance a816c00e-014a-252e-d973-000003a13770 
-on database directory /Users/jimmy/.worklight/6.2.0/server/derby/WorklightStarter/WRKLGHT  with class loader AntClassLoader[/usr/local/lib/node_modules/worklight-cli/node_modules/generator-worklight-server/lib/worklight-ant-deployer.jar] 
-Loaded from file:/usr/local/lib/node_modules/worklight-cli/node_modules/generator-worklight-server/lib/worklight-ant-deployer.jar
-java.vendor=Apple Inc.
-java.runtime.version=1.6.0_65-b14-466.1-11M4716
-user.dir=/Users/jimmy/Lab/WorklightStarter
+Mon Dec 08 23:03:09 CST 2014:
+Booting Derby version The Apache Software Foundation - Apache Derby - 10.8.2.3 - (1326460): instance a816c00e-014a-2a6c-ebb6-00000802ec90 
+on database directory /home/jimmy/.worklight/6.2.0/server/derby/WorklightStarter/WRKLGHT  with class loader AntClassLoader[/home/jimmy/Tools/Worklight-CLI/worklight-cli/node_modules/generator-worklight-server/lib/worklight-ant-deployer.jar] 
+Loaded from file:/home/jimmy/Tools/Worklight-CLI/worklight-cli/node_modules/generator-worklight-server/lib/worklight-ant-deployer.jar
+java.vendor=Oracle Corporation
+java.runtime.version=1.7.0_55-b13
+user.dir=/home/jimmy/Lab/hack_watson/WorklightStarter
 derby.system.home=null
 Database Class Loader started - derby.database.classpath=''
 ----------------------------------------------------------------
-Sun Dec 07 22:37:16 CST 2014:
-Booting Derby version The Apache Software Foundation - Apache Derby - 10.8.2.3 - (1326460): instance 40348015-014a-252e-d973-000003a13770 
-on database directory /Users/jimmy/.worklight/6.2.0/server/derby/WorklightStarter/WLREPORT  with class loader AntClassLoader[/usr/local/lib/node_modules/worklight-cli/node_modules/generator-worklight-server/lib/worklight-ant-deployer.jar] 
-Loaded from file:/usr/local/lib/node_modules/worklight-cli/node_modules/generator-worklight-server/lib/worklight-ant-deployer.jar
-java.vendor=Apple Inc.
-java.runtime.version=1.6.0_65-b14-466.1-11M4716
-user.dir=/Users/jimmy/Lab/WorklightStarter
+Mon Dec 08 23:03:09 CST 2014:
+Booting Derby version The Apache Software Foundation - Apache Derby - 10.8.2.3 - (1326460): instance 40348015-014a-2a6c-ebb6-00000802ec90 
+on database directory /home/jimmy/.worklight/6.2.0/server/derby/WorklightStarter/WLREPORT  with class loader AntClassLoader[/home/jimmy/Tools/Worklight-CLI/worklight-cli/node_modules/generator-worklight-server/lib/worklight-ant-deployer.jar] 
+Loaded from file:/home/jimmy/Tools/Worklight-CLI/worklight-cli/node_modules/generator-worklight-server/lib/worklight-ant-deployer.jar
+java.vendor=Oracle Corporation
+java.runtime.version=1.7.0_55-b13
+user.dir=/home/jimmy/Lab/hack_watson/WorklightStarter
 derby.system.home=null
 Database Class Loader started - derby.database.classpath=''

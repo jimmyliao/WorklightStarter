@@ -9,83 +9,11 @@
     			<link rel="apple-touch-icon" href="images/apple-touch-icon.png">
     		-->
     		<link rel="stylesheet" href="css/main.css">
-        <link rel="stylesheet" href="css/jquery.mobile-1.4.5.min.css" />
-        
-        <script src="js/jquery-2.1.1.min.js"></script>
     		<script>window.$ = window.jQuery = WLJQ;</script>
-        <script>
-            var jq=jQuery.noConflict();
-        </script>
-        <script src="js/jquery.mobile-1.4.5.min.js"></script>
-            
     	</head>
     	<body style="display: none;">
     		<!--application UI goes here-->
-
-        <div data-role="page" id="FeedsListPage"> 
-            <div data-role="header" data-position="fixed">
-                <h3>Worklight Starter</h3>
-                <a href="#" data-icon="refresh" class="ui-btn-right" onclick="loadFeeds()">Reload</a>
-            </div> 
-            <div data-role="content">
-                <ul data-role="listview" id="FeedsList"></ul>
-            </div>
-            <div data-role="footer" data-id="persistent_footer" data-position="fixed">
-                <div data-role="navbar">
-                    <ul>
-                        <li><a href="#FeedsListPage" data-icon="grid" class="ui-btn-active ui-state-persist">Feeds</a></li>
-                        <li><a href="#AboutPage" data-icon="info">About</a></li>
-                    </ul>
-                </div>
-            </div>
-        </div> 
-        
-        <div data-role="page" id="FeedContentPage" data-add-back-btn="true"> 
-            <div data-role="header" data-position="fixed">
-                <h3>Feed</h3>
-            </div> 
-            <div data-role="content" id="FeedContent">
-            </div> 
-            <div data-role="footer" data-id="persistent_footer" data-position="fixed">
-                <div data-role="navbar">
-                    <ul>
-                        <li><a href="#FeedsListPage" data-icon="grid" class="ui-btn-active ui-state-persist">Feeds</a></li>
-                        <li><a href="#AboutPage" data-icon="info">About</a></li>
-                    </ul>
-                </div>
-            </div>
-        </div> 
-
-        <div data-role="page" id="AboutPage"> 
-            <div data-role="header" data-position="fixed">
-                <h3>About</h3>
-            </div>
-            <div data-role="content" id="AboutContent">
-                <div id="aboutWorklightTitle"></div>
-                <div id="aboutWorklightText">Efficiently develop, run and manage HTML5, hybrid and native apps for smartphones and tablets with the Worklight platform and tools.</div>
-                <div id="aboutWorklightLink">worklight.com</div>
-            </div>
-            <div data-role="footer" data-id="persistent_footer" data-position="fixed">
-                <div data-role="navbar">
-                    <ul>
-                        <li><a href="#FeedsListPage" data-icon="grid">Feeds</a></li>
-                        <li><a href="#AboutPage" data-icon="info" class="ui-btn-active ui-state-persist">About</a></li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-        
-        <div data-role="dialog" id="DialogPage"> 
-            <div data-role="header" data-theme="d">
-                <h1>Dialog</h1>
-            </div>
-            
-            <div data-role="content">
-                <h3 id="DialogText"></h3>
-                <a href="#" data-role="button" data-rel="back">Close</a>            
-            </div> 
-        </div>
-                        <!--application UI end here-->
+    		Hello Worklight
     		<script src="js/initOptions.js"></script>
     		<script src="js/main.js"></script>
     		<script src="js/messages.js"></script>
