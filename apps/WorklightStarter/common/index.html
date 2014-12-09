@@ -18,7 +18,7 @@
         </script>
         <script>window.$ = window.jQuery = WLJQ;</script>
 -->        
-        <meta charset="utf-8" />
+        <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width; initial-scale=1.0; maximum-scale=1.0; minimum-scale=1.0; user-scalable=0;" />
         <title>WorklightStarter_jQueryMobile</title>
         <link rel="shortcut icon" href="images/favicon.png" />
@@ -43,7 +43,8 @@
         <div data-role="page" id="FeedsListPage"> 
             <div data-role="header" data-position="fixed">
                 <h3>Worklight Starter</h3>
-                <a href="#" data-icon="refresh" class="ui-btn-right" onclick="loadFeeds()">Reload</a>
+                <!--<a href="#" data-icon="refresh" class="ui-btn-right" onclick="loadFeeds()">Reload</a>-->
+                <a href="#" data-icon="refresh" class="ui-btn-right" onclick="myAjax()">Reload</a>
             </div> 
             <div data-role="content">
                 <ul data-role="listview" id="FeedsList"></ul>
@@ -53,6 +54,7 @@
                     <ul>
                         <li><a href="#FeedsListPage" data-icon="grid" class="ui-btn-active ui-state-persist">Feeds</a></li>
                         <li><a href="#AboutPage" data-icon="info">About</a></li>
+                        <li><a href="#ResultPage" data-icon="info">Result</a></li>
                     </ul>
                 </div>
             </div>
@@ -69,6 +71,7 @@
                     <ul>
                         <li><a href="#FeedsListPage" data-icon="grid" class="ui-btn-active ui-state-persist">Feeds</a></li>
                         <li><a href="#AboutPage" data-icon="info">About</a></li>
+                        <li><a href="#ResultPage" data-icon="info">Result</a></li>
                     </ul>
                 </div>
             </div>
@@ -82,16 +85,35 @@
                 <div id="aboutWorklightTitle"></div>
                 <div id="aboutWorklightText">Efficiently develop, run and manage HTML5, hybrid and native apps for smartphones and tablets with the Worklight platform and tools.</div>
                 <div id="aboutWorklightLink">worklight.com</div>
+
             </div>
             <div data-role="footer" data-id="persistent_footer" data-position="fixed">
                 <div data-role="navbar">
                     <ul>
                         <li><a href="#FeedsListPage" data-icon="grid">Feeds</a></li>
                         <li><a href="#AboutPage" data-icon="info" class="ui-btn-active ui-state-persist">About</a></li>
+                        <li><a href="#ResultPage" data-icon="info">Result</a></li>
                     </ul>
                 </div>
             </div>
         </div>
+
+        <div data-role="page" id="ResultPage">
+            <div data-role="header" data-position="fixed">
+                <h3>Result</h3>
+            </div>
+            <!--
+            <div data-role="footer" data-id="persistent_footer" data-position="fixed">
+                <div data-role="navbar">
+                    <ul>
+                        <li><a href="#FeedsListPage" data-icon="grid">Feeds</a></li>
+                        <li><a href="#AboutPage" data-icon="info" >About</a></li>
+                        <li><a href="#ResultPage" data-icon="info" class="ui-btn-active ui-state-persist">Result</a></li>
+                    </ul>
+                </div>
+            </div>
+
+        </div> //ResultPage-->
         
         <div data-role="dialog" id="DialogPage"> 
             <div data-role="header" data-theme="d">
@@ -108,5 +130,26 @@
     		<script src="js/initOptions.js"></script>
     		<script src="js/main.js"></script>
     		<script src="js/messages.js"></script>
+
+
+<script>
+(function() {
+  var flickerAPI = "http://api.flickr.com/services/feeds/photos_public.gne?jsoncallback=?";
+  $.getJSON( flickerAPI, {
+    tags: "mount rainier",
+    tagmode: "any",
+    format: "json"
+  })
+    .done(function( data ) {
+      $.each( data.items, function( i, item ) {
+        $( "<img>" ).attr( "src", item.media.m ).appendTo( "#resultText" );
+        if ( i === 3 ) {
+          return false;
+        }
+      });
+    });
+})();
+</script>
+
     	</body>
 </html>

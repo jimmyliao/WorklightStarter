@@ -5,6 +5,46 @@ jq(".FeedItem").live("click", function(){
 	displayFeed(jq(this).attr("id"));
 });
 */
+function myAjax(){
+
+	var feedApiAjax = 'http://ajax.googleapis.com/ajax/services/feed/load?v=1.0&q=';
+	var feedApiGetJSON = 'http://ajax.googleapis.com/ajax/services/feed/load?v=1.0&callback=?&q=';
+	var feedUrl = 'http://www.engadget.com/rss.xml';
+	jq.ajax({
+//        crossOrigin: true,
+	    dataType: "jsonp",
+                url: feedApiAjax + feedUrl,
+                success: function(data) {
+                    console.log('jq.ajax() success');
+                    loadEnagetFeedsTest(data);
+                },
+                error: function(xhr, testStatus, error) {
+                    console.log('jq.ajax() error, ' + error + ", testStatus=" + testStatus);
+                }
+
+            });
+}
+
+function loadEnagetFeedsTest(data) {
+	// load to div id='FeedContent'
+	console.log('loadEnagetFeedsTest.');
+	if (!data || !data.responseData || !data.responseData.responseDetails || data.responseData.responseStatus!=200)
+		showErrorMessage("Could not retrieve feeds");
+	
+	feeds = data.responseData.feed.entries;
+	jq("#FeedsList").empty();
+	
+	for (var i=0; i<feeds.length; i++){
+		var dataItem = feeds[i];
+		var listItem = jq("<li class='FeedItem' id='" + i + "'><a href='#'><h3>" + dataItem.title + "</h3><p>"+ dataItem.publishedDate+"</p></a></li>");
+		console.log("<li class='FeedItem' id='" + i + "'><a href='#'><h3>" + dataItem.title + "</h3><p>"+ dataItem.pubDate+"</p></a></li>");
+
+		jq("#FeedsList").append(listItem);
+	}
+	
+	jq("#FeedsList").listview('refresh');
+
+}
 
 function loadFeeds(){
 	// jq.mobile.showPageLoadingMsg();
@@ -63,7 +103,7 @@ function displayFeed(feedId){
 }
 
 function showErrorMessage(text){
-	jq.mobile.hidePageLoadingMsg();
+	//jq.mobile.hidePageLoadingMsg();
 	jq("#DialogText").html(text);
 	jq.mobile.changePage("#DialogPage");
 }
@@ -82,6 +122,6 @@ function wlCommonInit(){
 	 */
 	
 	// Common initialization code goes here
-	loadFeeds();
+	//loadFeeds();
 
 }
